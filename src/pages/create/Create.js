@@ -11,7 +11,7 @@ import './Create.css'
 const categories = [
   {value: 'development', label: 'Development'},
   {value: 'design', label: 'Design'},
-  {value: 'sale', label: 'Sales'},
+  {value: 'sales', label: 'Sales'},
   {value: 'marketing', label: 'Marketing'}
 ]
 
@@ -56,14 +56,15 @@ const Create = ()=> {
     const createdBy = {
       displayName: user.displayName,
       photoURL: user.photoURL,
-      id: user.id
+      id: user.uid
     }
+    
 
     const assignedUsersList = assignedUsers.map((u) => {
       return {
         displayName: u.value.displayName,
         photoURL: u.value.photoURL,
-        id: u.value.uid
+        id: u.value.id
       }
     })
 
@@ -78,7 +79,7 @@ const Create = ()=> {
     }
 
     await addDocument(project)
-    console.log('project Added', project)
+    // console.log('project Added', project)
     if (!response.error) {
       navigate('/')
     }

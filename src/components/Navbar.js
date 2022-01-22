@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import Temple from '../assets/temple.svg'
+import Logo from '../assets/businessman.png'
 import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="navbar">
       <ul>
         <li className="logo">
-          <img src={Temple} alt="logo"/>
+          <img src={Logo} alt="logo"/>
           <span>Project Manager</span>
         </li>
 
